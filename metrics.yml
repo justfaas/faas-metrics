@@ -1,0 +1,5 @@
+metrics:
+  # Gateway
+  - name: faas_proxy_requests_total
+  - name: faas_proxy_requests_per_second
+    query: rate(faas_proxy_requests_total{namespace,service}[1m])
